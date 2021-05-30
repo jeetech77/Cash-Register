@@ -1,0 +1,48 @@
+* {
+    margin: 0%;
+    box-sizing: border-box;
+    transition: all .3s linear;
+}
+
+h1 {
+    text-align: center;
+    margin: 1rem;
+
+}
+
+.container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+input {
+    display: block;
+    width: 50%;
+    outline: none;
+    text-align: center;
+    margin: 2rem auto;
+    padding: .8rem 1rem;
+}
+
+input::placeholder {
+    font-weight: 600;
+}
+.cash-amount{
+    visibility:hidden;
+    transition: all .3s ease-in-out;
+}
+.btn {
+    outline: none;
+    padding: .5rem 1rem;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;;
+}
+
+.notes {
+    max-width: 50%;
+    margin-bottom: .5rem;
+    margin: 1rem auto;
+    border: 1px solid black;
+    padding: .4rem;
+}
