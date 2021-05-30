@@ -31,12 +31,20 @@ input::placeholder {
     visibility:hidden;
     transition: all .3s ease-in-out;
 }
-.btn {
+.btn-sec{
+    text-align: center;
+}
+.btn{
     outline: none;
     padding: .5rem 1rem;
-    display: block;
-    margin: auto;
     margin-bottom: 2rem;;
+}
+.alert-text{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
 }
 
 .notes {
