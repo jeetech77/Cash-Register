@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash Register</title>
+    <title>Change Calculator</title>
     <link rel="stylesheet" href="style/style.css">
     <script src="script/script.js" defer></script>
 </head>
 <body>
-    <h1>Cash Register</h1>
+    <h1>Change Calculator</h1>
     <div class="container">
         <input placeholder="Firstly enter bill amount here." class="bill-amount" />
         <input placeholder="Input given cash amout here" class="cash-amount" />
     </div>
     <div class="btn-sec">
-        <button class="btn">Calculate Changes</button>
-        <button class="clear-btn btn">Clear Amounts</button>
+        <button class="btn">Calculate</button>
     </div>
     <p class="alert-text"></p>
-    <div class="notes ">2000 Notes : <span class="two-thou-note"></span></div>
-    <div class="notes ">500 Notes : <span class="five-hun-note"></span></div>
-    <div class="notes ">100 Notes : <span class="hun-note"></span></div>
-    <div class="notes ">20 Notes : <span class="twen-note"></span></div>
-    <div class="notes ">10 Notes : <span class="ten-note"></span></div>
-    <div class="notes ">5 Notes : <span class="five-note"></span></div>
-    <div class="notes ">1 Notes : <span class="one-note"></span></div>
+    <div class="flex-container">
+    <div class="notes ">2000 Notes : <span class="two-thou-note">0</span></div>
+    <div class="notes ">500 Notes : <span class="five-hun-note">0</span></div>
+    <div class="notes ">100 Notes : <span class="hun-note">0</span></div>
+    <div class="notes ">20 Notes : <span class="twen-note">0</span></div>
+    <div class="notes ">10 Notes : <span class="ten-note">0</span></div>
+    <div class="notes ">5 Notes : <span class="five-note">0</span></div>
+    <div class="notes ">1 Notes : <span class="one-note">0</span></div>
+    </div>
 </body>
 </html>

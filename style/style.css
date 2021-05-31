@@ -1,10 +1,17 @@
+:root{
+    --pri-color:#5DA3FA;
+}
 * {
     margin: 0%;
     box-sizing: border-box;
     transition: all .3s linear;
 }
-
+body{
+    background-color: #1e2124;
+    color: white;
+}
 h1 {
+    color: var(--pri-color);
     text-align: center;
     margin: 1rem;
 
@@ -16,41 +23,71 @@ h1 {
 }
 
 input {
+    border: 1px solid var(--pri-color);
+    border-radius: 10px;
     display: block;
     width: 50%;
     outline: none;
     text-align: center;
     margin: 2rem auto;
     padding: .8rem 1rem;
+    background-color: inherit;
+    color: green;
+    font-weight: bolder;
 }
-
+input:focus{
+    border-color: green;
+}
 input::placeholder {
-    font-weight: 600;
+    color: var(--pri-color);
 }
 .cash-amount{
     visibility:hidden;
     transition: all .3s ease-in-out;
 }
-.btn-sec{
-    text-align: center;
-}
 .btn{
+    cursor: pointer;
+    border: 1px solid var(--pri-color);
+    border-radius: 10px;
+    display: block;
     outline: none;
-    padding: .5rem 1rem;
-    margin-bottom: 2rem;;
+    padding: .5rem 1.2rem;
+    margin: auto;
+    margin-bottom: 2rem;
+    font-weight: bolder;
+    background-color: inherit;
+    color: var(--pri-color);
+}
+.btn:hover{
+    border-color: green;
+    color: green;
 }
 .alert-text{
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: inherit;
+    max-width: 80%;
+    color: var(--pri-color);
+    margin: auto;
+    text-align: center;
+    padding: .5rem;
     height: 2rem;
+    border-radius: 10px;
+}
+.flex-container{
+    height: 20vh;
+    display: flex;
+    margin: auto;
+    max-width: 80%;
+    flex-wrap: wrap;
 }
 
 .notes {
+    color: var(--pri-color);
+    width: 135px;
+    font-size: large;
     max-width: 50%;
     margin-bottom: .5rem;
-    margin: 1rem auto;
-    border: 1px solid black;
+    margin: 1rem;
+    border: 1px solid var(--pri-color);
+    border-radius: 5px;
     padding: .4rem;
 }
