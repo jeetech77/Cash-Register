@@ -77,12 +77,14 @@ input::placeholder {
     display: flex;
     margin: auto;
     max-width: 80%;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .notes {
+    text-align: center;
     color: var(--pri-color);
-    width: 135px;
+    width: 9rem;
     font-size: large;
     max-width: 50%;
     margin-bottom: .5rem;
