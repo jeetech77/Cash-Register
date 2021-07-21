@@ -78,4 +78,9 @@ function clearNotesField() {
     alertText.innerHTML = "";
     alertText.style.backgroundColor = "inherit";
     notesContainer.style.visibility = "hidden";
-}
+    listOfNotes.forEach((value, index)=> {
+        listOfNotes[index].innerHTML = `${amountOfNotes[index]} Notes : 0`;
+        listOfNotes[index].style.color = "white";
+        listOfNotes[index].style.fontWeight = "inherit";
+    }
+    )}
