@@ -1,5 +1,5 @@
 :root{
-    --pri-color:#5DA3FA;
+    --pri-color:#ff03d6;
 }
 * {
     margin: 0%;
@@ -40,7 +40,7 @@ input {
     margin: 2rem auto;
     padding: .8rem 1rem;
     background-color: inherit;
-    color: green;
+    color: #ff03d6;
     font-weight: bolder;
 }
 input:focus{
@@ -73,7 +73,7 @@ input::placeholder {
 .alert-text{
     background-color: inherit;
     max-width: 80%;
-    color: var(--pri-color);
+    color: aqua;
     margin: auto;
     text-align: center;
     padding: .5rem;
