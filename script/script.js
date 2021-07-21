@@ -22,45 +22,50 @@ billAmountInput.addEventListener('focusout', () => {
 btnCalculate.addEventListener("click", () => {
     let billAmount = Number(billAmountInput.value);
     let cashAmount = Number(cashAmountInput.value);
+
     //  Checking for no values
     if (billAmount === 0 || cashAmount === 0) {
-        alertText.innerText = `Uppps, Enter some amount please.`;
-        alertText.style.backgroundColor = "red";
-        return; // Exiting the function here.
-    }
-    // Checking for less values
-    if (billAmount > cashAmount) {
-        alertText.innerText = `Cash amount is less than bill amount.`;
-        alertText.style.backgroundColor = "red";
-        return; // Exiting the function here.
-    }
-    // Checking for equal amouts
-    if (billAmount === cashAmount) {
-        alertText.innerText = `No Amount to be returned.`;
-        alertText.style.backgroundColor = "green";
-        return; // Exiting the function here.
+        showError("Enter some amount first.",'red')
     }
 
-    leftAmount = cashAmount - billAmount;
-    notesContainer.style.visibility = "visible";
-    alertText.innerText = `Left amount : ${leftAmount}`;
-    alertText.style.backgroundColor = "green";
-    amountOfNotes.map((note, index) => {
-        numOfNotes = leftAmount / note;
-        numOfNotes = Math.floor(numOfNotes)
-        leftAmount = leftAmount - (numOfNotes * note);
-        if (numOfNotes > 0) {
-            listOfNotes[index].innerText = `${amountOfNotes[index]} Notes : ${numOfNotes}`;
-            listOfNotes[index].style.color = "green";
-            listOfNotes[index].style.fontWeight = "bolder";
-        }
-    });
+    // Checking for less values
+    else if (billAmount > cashAmount) {
+        showError("Cash amount is less than bill amount.",'red')
+    }
+    
+    // Checking for equal amouts
+    else if (billAmount === cashAmount) {
+        showError("No amount to be returned", "green");
+    }
+    else {
+        leftAmount = cashAmount - billAmount;
+        notesContainer.style.visibility = "visible";
+        alertText.innerText = `Left amount : ${leftAmount}`;
+        alertText.style.backgroundColor = "green";
+        amountOfNotes.map((note, index) => {
+            numOfNotes = leftAmount / note;
+            numOfNotes = Math.floor(numOfNotes)
+            leftAmount = leftAmount - (numOfNotes * note);
+            if (numOfNotes > 0) {
+                listOfNotes[index].innerText = `${amountOfNotes[index]} Notes : ${numOfNotes}`;
+                listOfNotes[index].style.color = "green";
+                listOfNotes[index].style.fontWeight = "bolder";
+            }
+        });
+    }
 });
 
 // To hide elements
 
 billAmountInput.addEventListener('focusin', clearFields);
 cashAmountInput.addEventListener('focusin', clearNotesField)
+
+function showError(errMsg, errColor) {
+    console.log(errMsg);
+    console.log(errColor);
+    alertText.innerText = errMsg;
+    alertText.style.backgroundColor = errColor;
+}
 
 function clearFields() {
     billAmountInput.value = '';
