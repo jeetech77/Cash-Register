@@ -3,10 +3,10 @@
 const billAmountInput = document.querySelector(".bill-amount");
 const cashAmountInput = document.querySelector(".cash-amount");
 const notesContainer = document.querySelector(".flex-container");
-const calculateBtn = document.querySelector(".btn");
+const btnCalculate = document.querySelector(".btn");
 const alertText = document.querySelector(".alert-text");
 const listOfNotes = document.querySelectorAll(".notes")
-let amoutOfNotes = [2000, 500, 100, 20, 10, 5, 1]
+let amountOfNotes = [2000, 500, 100, 20, 10, 5, 1]
 
 // To show Cash amount input field
 
@@ -19,7 +19,7 @@ billAmountInput.addEventListener('focusout', () => {
 
 // Logic processing here
 
-calculateBtn.addEventListener("click", () => {
+btnCalculate.addEventListener("click", () => {
     let billAmount = Number(billAmountInput.value);
     let cashAmount = Number(cashAmountInput.value);
     //  Checking for no values
@@ -45,19 +45,19 @@ calculateBtn.addEventListener("click", () => {
     notesContainer.style.visibility = "visible";
     alertText.innerText = `Left amount : ${leftAmount}`;
     alertText.style.backgroundColor = "green";
-    amoutOfNotes.map((note, index) => {
+    amountOfNotes.map((note, index) => {
         numOfNotes = leftAmount / note;
         numOfNotes = Math.floor(numOfNotes)
         leftAmount = leftAmount - (numOfNotes * note);
         if (numOfNotes > 0) {
-            listOfNotes[index].innerText = `${amoutOfNotes[index]} Notes : ${numOfNotes}`;
+            listOfNotes[index].innerText = `${amountOfNotes[index]} Notes : ${numOfNotes}`;
             listOfNotes[index].style.color = "green";
             listOfNotes[index].style.fontWeight = "bolder";
         }
     });
 });
 
-// Checking valid amounts
+// To hide elements
 
 billAmountInput.addEventListener('focusin', clearFields);
 cashAmountInput.addEventListener('focusin', clearNotesField)
