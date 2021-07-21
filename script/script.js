@@ -25,7 +25,7 @@ btnCalculate.addEventListener("click", () => {
 
     //  Checking for no values
     if (billAmount === 0 || cashAmount === 0) {
-        showError("Enter some amount first.",'red')
+        showError("Enter valid amount please.",'red')
     }
 
     // Checking for less values
