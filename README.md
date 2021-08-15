@@ -1,15 +1,20 @@
 # Cash Register
 
-## About 
+A GUI app to help shopkeepers to calculate the changes and return them in the minimum amount of numbers.
 
+[Check Live Here ](https://chnagescal.netlify.app/)
 
-Here I am creating an application to get the minimum number of notes to be returned.
+## How To Use ?
 
 - Firstly give the bill amount.
 - Change the pointer focus from the bill amount.
 - Now you will get a box to enter given Cash amount.
 - Now click on the calculate button
 
-## Programming Language:
+## Tech-Stck
 
-App is created in Html, Css and Vanilla JS. Hosted on netlify.
+- HTML
+- CSS
+- Vanilla JS
+
+Hosted on Netlify.
