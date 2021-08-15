@@ -70,7 +70,7 @@ input::placeholder {
     border-color: green;
     color: green;
 }
-.alert-text{
+.alert-text,.bill-alert{
     background-color: inherit;
     max-width: 80%;
     color: aqua;
@@ -101,4 +101,8 @@ input::placeholder {
     border: 1px solid var(--pri-color);
     border-radius: 5px;
     padding: .4rem;
+}
+
+.bill-alert{
+    display: none;
 }

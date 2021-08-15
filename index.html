@@ -13,8 +13,11 @@
     <p class="intro-text">Enter the bill amount first and then the total amount given by customer to calculate the
         minimum number of notes to be given.</p>
     <div class="container">
-        <input type="number" placeholder="Firstly enter bill amount here." class="bill-amount" />
-        <input type="number" placeholder="Input given cash amout here" class="cash-amount" />
+        <form action="" onsubmit="return false">
+            <input type="number" placeholder="Firstly enter bill amount here." class="bill-amount" />
+            <p class="bill-alert">After enterning bill amount move the cursor focus.</p>
+            <input type="number" placeholder="Input given cash amout here" class="cash-amount" />
+        </form>
     </div>
     <div class="btn-sec">
         <button class="btn">Calculate</button>
