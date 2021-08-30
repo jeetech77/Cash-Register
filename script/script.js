@@ -6,16 +6,19 @@ const notesContainer = document.querySelector(".flex-container");
 const btnCalculate = document.querySelector(".btn");
 const alertText = document.querySelector(".alert-text");
 const listOfNotes = document.querySelectorAll(".notes")
-const billAlert = document.querySelector(".bill-alert");
 
 let amountOfNotes = [2000, 500, 100, 20, 10, 5, 1]
 
 // To show Cash amount input field
 
-billAmountInput.addEventListener('focusout', () => {
+billAmountInput.addEventListener('keyup', () => {
+
     let billAmount = Number(billAmountInput.value);
-    if (billAmount !== 0) {
-        billAlert.style.display = "none";
+    console.log(billAmount);
+    if (billAmount == 0) {
+        cashAmountInput.style.visibility = "hidden";
+    }
+    else if (billAmount !== 0) {
         cashAmountInput.style.visibility = "visible";
     }
 })
@@ -74,7 +77,6 @@ function clearFields() {
     billAmountInput.value = '';
     cashAmountInput.value = '';
     cashAmountInput.style.visibility = "hidden";
-    billAlert.style.display = "block";
     clearNotesField();
 }
 
