@@ -40,7 +40,7 @@ input {
     margin: 2rem auto;
     padding: .8rem 1rem;
     background-color: inherit;
-    color: #ff03d6;
+    color: var(--pri-color);
     font-weight: bolder;
 }
 input:focus{
