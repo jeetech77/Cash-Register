@@ -15,7 +15,7 @@ billAmountInput.addEventListener('keyup', () => {
 
     let billAmount = Number(billAmountInput.value);
     console.log(billAmount);
-    if (billAmount == 0) {
+    if (billAmount <= 0) {
         cashAmountInput.style.visibility = "hidden";
     }
     else if (billAmount !== 0) {
@@ -30,7 +30,7 @@ btnCalculate.addEventListener("click", () => {
     let cashAmount = Number(cashAmountInput.value);
 
     //  Checking for no values
-    if (billAmount === 0 || cashAmount === 0) {
+    if (billAmount <= 0 || cashAmount <= 0) {
         showError("Enter valid amount please.",'red')
     }
 
